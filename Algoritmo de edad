@@ -1,0 +1,43 @@
+# FUNCIÓN EDAD
+
+def Edad(d,m,a):
+    edad = 2019 - ano
+    if mes > 9:
+        edad-=1
+    elif mes == 9:
+        if dia > 15:
+            edad-=1
+        elif dia == 15:
+            print("fc")
+    return edad
+
+# COMPROBAR EL CORRECTO INGRESO DE DATOS
+
+a = False
+while a != True:
+    dia = int(input("Ingrese el día de su nacimiento: "))
+    if dia >= 1 and dia <= 31:
+        a = True
+    else:
+        print("ERROR: El día de su nacimiento debe estar entre 1 y 31")
+        
+a = False
+while a != True:
+    mes = int(input("Ingrese el mes de su nacimiento: "))
+    if mes >= 1 and mes <= 12:
+        a = True
+    else:
+        print("ERROR: El mes de su nacimiento debe estar entre 1 y 12")
+        
+a = False
+while a != True:
+    ano = int(input("Ingrese el año de su nacimiento: "))
+    if ano >= 1899 and ano <= 2019:
+        a = True
+    else:
+        print("ERROR: El año de su nacimiento debe estar entre 1989 y 2019")
+        
+# PROGRAMA PRINCIPAL
+
+años = Edad(dia,mes,ano)
+print("Su edad es:",años,"años")
